@@ -1,0 +1,260 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f9f9f9;
+}
+
+:root{
+    --greencolor:#3db839;
+}
+
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    background-color: #3DB83A;
+    align-items: center;
+    margin-bottom: 1px;
+    box-shadow: 0px 0px 5px #999999;
+}
+
+ul{
+    display: flex;
+    
+
+}
+
+.logo{
+    width: 10vw;
+    height: 10vh;
+    object-fit: contain;
+}
+
+.links li{
+    list-style-type: none;
+    margin: 0 1rem;
+}
+
+.links li a{
+    text-decoration: none;
+    font-weight: bold;
+    font-family: cursive;
+    color: #fff;
+}
+
+.links li:hover{
+    background-color: red;
+}
+
+button{
+    background-color: #E18700;
+   /* border: 2px solid red;
+    outline: 2px solid blue;
+    */
+    border-radius: 4px;
+
+    border: none;
+    padding: 1rem;
+    color: #fff;
+}
+
+.banner{
+    background-color: #3A9F20;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner img{
+    width: 20rem;
+    height: fit-content;
+    object-fit: contain;
+}
+
+.banner .loc{
+    background-color: #303a4b;
+    color: #fff;
+    padding: .4rem;
+    opacity: .7;
+    border-radius: 5px;
+    font-weight: bold;
+
+}
+
+.banner.loc:hover{
+    opacity: 1;
+}
+
+.banner .searchbox{
+    border: none;
+    outline: none !important;
+    background-color: transparent;
+    
+}
+
+.banner .search{
+    background-color: #ffffff;
+    padding: .6rem 0;
+    border-radius: 3px;
+    margin-top: 2rem;
+}
+
+.banner .search .fa-search{
+    color: #3DB83A;
+    
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+main aside{
+    background-color: #ffffff;
+    box-shadow: 5px 0 1px solid #999;
+    flex: 1;
+}
+
+main aside div{
+    font-size: 1rem;
+    font-family: cursive;
+    margin: 1rem 0.4rem;
+}
+
+main aside div:hover{
+    background-color: #f3f3f3;
+    padding: 2.5px;
+}
+
+main aside div i{
+    float: right;
+}
+
+main aside{
+    flex: 1;
+}
+main section{
+    flex: 3;
+}
+.market{
+    margin: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+}
+.item{
+    box-shadow: 0 0 1px #999;
+    border-radius: 5px;
+    margin: 3px;
+    
+    
+}
+
+.item img{
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+    
+}
+
+.item img:hover{
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+    transform: scale(1.09);
+}
+
+.item p{
+    font-weight: 200;
+    color: #303a4b;
+}
+
+.item small{
+    color: #3A9F20;
+}
+
+.item .img_design{
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+
+.item .fa-bookmark{
+    font-weight: 100;
+    color: var(--greencolor);
+    position: absolute;
+    right: 20%;
+    top: 90%;
+    background-color: #fff;
+    padding: .5rem;
+    border-radius: 50%;
+    box-shadow: 0 0 2px #999;
+}
+
+/*Main styling Ends*/
+
+/*Footer styling Starts*/
+
+.footerimg{
+ margin-bottom: -1rem;
+}
+
+.foot{
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--greencolor);
+}
+
+.foot div a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.test{
+    background: linear-gradient(to left ,red, green, yellow);
+    padding: 5rem;
+    background-image: url(./images/girls.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50%;
+}
+/*media query for xs screen */
+
+@media(max-width: 768px){
+    .banner{
+        flex-direction: column;
+    }
+    main{
+        flex-direction: column;
+    }
+    .item{
+        width: 100%;
+    }
+    .foot{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .foot div{
+        margin: 1rem 0;
+    }
+}
+
+
+@media(max-width: 1079px){
+    .banner .loc{
+        display:block
+    }
+
+
+}

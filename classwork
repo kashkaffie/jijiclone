@@ -1,0 +1,205 @@
+function handleSubmit(){
+    alert(567)
+}
+
+var namepattern = /[^0-9][a-z]{3,}/ig
+
+var emailpattern = /[\w]{3,}\@[a-z]{3,}\.[a-z]{2,}/ig
+
+var pwdpattern = /[a-z0-9]{6,}/ig
+
+function handleSubmit(){
+    var name = document.getElementById("myname").value
+    var email = document.getElementById("myemail").value
+    var password = document.getElementById("mypwd").value
+    
+    if(name === "" || email === "" || password === ""){
+        alert("input field cannot be empty");
+
+    }else if(!namepattern.test(name)){
+        alert("Enter valid Name")
+
+    }else if(!emailpattern.test(email)){
+        alert("Enter valid Email")
+
+    }else if(!pwdpattern.test(password)){
+        alert("Enter valid Password")
+
+    }else{
+        alert("Registration Successful")
+    }
+
+}
+
+//var ref = setInterval(function(){
+//    alert("interacting with browser in 5s")
+//}, 5000)
+
+ //const ref = setTimeout(function(){
+  //  alert("This is timeout")
+//}, 5000)
+
+//const ref = window.open("https://nairaland.com")
+
+//function handleClick(){
+  //  window.closed()
+//}
+
+//console.log(window.history)
+
+//window.navigator.geolocation.getCurrentPosition(onsuccess, onerror, {enableHighAccuracy: true})
+
+//function onsuccess(position){
+   // console.log(position.coords.latitude)
+   // console.log(position.coords.longitude)
+//}
+
+
+//function onerror(e){
+  //  console.log(e)
+//}
+
+//function moveBack(){
+ //   alert("you click left arow")
+//}
+
+//function moveForward(){
+  //  alert("you click right arrow")
+//}
+
+//function moveBack(){
+//    window.history.back()
+//}
+
+//function moveForward(){
+ //   window.history.forward()
+ //    window.location.reload()
+ //}
+
+//alert(window.location.origin)
+
+//alert(window.navigator.onLine)
+
+var newElement = document.createElement("h1")
+
+newElement.innerHTML = "this is the new h1 element"
+
+document.head.append(newElement)
+
+console.log(document.head.children)
+
+var header = document.getElementById('header')
+
+console.log(header)
+var header = document.getElementById("header");
+
+var newElement = document.createElement("button")
+
+//newElement.innerHTML = "close"
+
+//header.insertBefore(newElement, header.children[1])
+
+//header.removeChild(header.children[1])
+
+//header.append(newElement)
+
+
+//console.log(header.children)
+
+// newH1 = document.createElement("h1")
+//newH1.innerHTML = "Hello world"
+
+//newH1.setAttribute("class", "btnclass")
+
+//var body = document.body
+//body.insertBefore(newH1, body.children[2])
+
+
+
+// var check = new Promise(function(onsuccess, onerror){
+//     fetch("https://randomuser.me/api/?results=10")
+//     .then((res) => res.json())
+//     .then((res) => onsuccess(res))
+//     .catch((res) => onerror(err))
+   
+// })
+
+// check.then(function(res){
+//     console.log(res)
+// },
+// function(err){
+//     console.log(err)
+// })
+
+// function person(name, age){
+//     return console.log(name + age)
+// }
+
+// person("enuka", 1)
+
+class Person{
+   constructor(name, gender){
+    this.myname = name;
+    this.mygender = gender;
+   }
+   getInfo(){
+    alert(`my name is ${this.myname} and i am a ${this.mygender}`)
+   }
+}
+
+class Car extends Person{
+    constructor(name, gender, model, year){
+        super(name, gender)
+        this.mymodel = model
+        this.myyear = year
+    }
+
+    getInfo(){
+        alert(`${this.myname} bought ${this.mymodel} and is ${this.myyear} `)
+    }
+}
+
+
+
+
+const person1 = new Person("seyi", "m")
+
+const person2 = new Person("kash", "f")
+const car1 = new Car("camry", 2000)
+const car2 = new Car("ajayi", "male","audi", 2022)
+
+//person1.getInfo()
+//car2.getInfo()
+
+// class Car{
+//     constructor(car, model){
+//         this.mycar = car;
+//         this.mymodel = model;
+//     }
+// }
+
+// const car1 = new Car("jaguar", "2016")
+// const car2 = new Car("benz", "2020")
+
+// alert(car2.mycar)
+
+
+var date = new Date()
+
+var person1 = {
+    name: "kash",
+    state: "ogun"
+}
+
+
+export {date, person1}
+
+
+
+
+
+
+
+
+
+
